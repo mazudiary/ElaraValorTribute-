@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To Elara Valor</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Star_icon_2.svg/1024px-Star_icon_2.svg.png" type="image/png">
+  <meta name="description" content="A heartfelt digital card for Elara Valor, celebrating friendship and shared memories;">
+  <meta name="author" content="Basharul - Alam - Mazu">
+  <meta name="keywords" content="friendship, digital card, Elara Valor, best friends day, heartfelt message">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+e5hZl1j7x8a9c5d5b2d5b2" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- PAGE 1: Password Input -->
+    <div class="page active" id="page1">
+        <h2>Cosmos Password</h2>
+        <p>Where did we first meet? (Thank you na deya vaia?)</p>
+        <input type="text" id="passwordInput" placeholder="Enter place..." autocomplete="off" />
+        <button onclick="checkPassword()">Submit</button>
+        <p id="passwordError" style="color:#ff4444; height:1.5em;"></p>
+    </div>
+
+    <!-- PAGE 2: Date and "ss mean" -->
+    <div class="page" id="page2">
+        <h2 id="page2Text">Do you know today's date?</h2>
+        <p id="page2TextContent">Do you know today's date?</p>
+        <img id="page2Image" src="" alt="SS Meaning Illustration" style="display:none; max-width: 100%; border-radius: 10px;"/>
+        <button id="page2Btn" onclick="page2Next()">Next</button>
+    </div>
+
+    <!-- PAGE 3: Friendship card -->
+    <div class="page" id="page3">
+        <section id="affirmations">
+            <h2>Mirror of Affirmations</h2>
+            <div class="affirmation-cloud" id="affirmationCloud">
+                <span>Radiant</span>
+                <span>Courageous</span>
+                <span>Wise</span>
+                <span>Kind</span>
+                <span>Mystic</span>
+                <span>Stellar</span>
+                <span>Fierce</span>
+                <span>Gentle</span>
+            </div>
+        </section>
+
+        <section id="letters">
+            <h2>Letters to Elara</h2>
+            <div class="letter-container">
+                <p>Dear Elara,<br><br>
+                On this National Best Friends Day, I just want to say... you're the kind of person people only meet once in a lifetime. You're not only human, you're human medicine. Thank you for being my confidant, my magic and my starlight. <br><br>
+                Forever grateful,<br>
+                Your Painful friend ✨</p>
+            </div>
+        </section>
+
+        <section id="chemistry">
+            <h2>Friendship Chemistry</h2>
+            <div class="chemistry">
+                <div class="element empathy"><strong>E</strong><div><span class="icon">❤️</span>Empathy</div></div>
+                <div class="element loyalty"><strong>L</strong><div><span class="icon">🛡️</span>Loyalty</div></div>
+                <div class="element admiration"><strong>A</strong><div><span class="icon">⭐</span>Admiration</div></div>
+                <div class="element resonance"><strong>R</strong><div><span class="icon">〰️</span>Resonance</div></div>
+                <div class="element awe"><strong>A</strong><div><span class="icon">👁️</span>Awe</div></div>
+            </div>
+        </section>
+
+        <section id="oracle">
+            <h2>Oracle Says...</h2>
+            <div class="oracle-box">
+                <p id="oracleText">✨ Click the button to reveal your future ✨</p>
+                <button onclick="predictFuture()">Reveal Future</button>
+            </div>
+        </section>
+
+        <section id="endnote">
+            <h2>Final Note</h2>
+            <p>Thank you, Elara, for being the most incredible friend in the galaxy.</p>
+            <!-- Added button for surprise letter -->
+            <button onclick="showSurpriseLetter()">A Surprise for You</button>
+            <div class="fireflies" id="fireflies"></div>
+        </section>
+
+        <!-- Updated Popup Modal with title support -->
+        <div id="popupModal" class="popup-modal">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">×</span>
+                <h3 id="popupTitle" style="display:none;"></h3>
+                <p id="popupMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
